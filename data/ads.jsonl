@@ -1,0 +1,54 @@
+{
+    "content":
+    {
+        "001":
+        {
+            "name": "Fairmont San Fransisco",
+            "website": "https://www.fairmont.com/en/hotels/san-francisco/fairmont-san-francisco.html",
+            "body": "THE original FAIRMONT ATOP SAN FRANCISCO'S NOB HILL \n Fairmont San Francisco, an iconic Beaux Arts landmark, has been a beacon of style for over a century. With its grandeur, it captures the hearts of San Francisco residents and visitors alike. Renowned for offering the best panoramic views in the city, our luxury hotel is celebrated for its impeccable service, transforming moments into cherished memories.", 
+            "geo": ["San Fransisco, CA"],
+            "price_night": 298, "currency": "USD",
+            "review": 4.5, "numreviews": 7011,
+            "features": 
+            {
+                "": 
+
+            }
+
+
+        },
+        "002":
+        {
+
+        },
+        "003":
+        {
+
+        },
+        "004":
+        {
+
+        },
+        "005":
+        {
+
+        },
+        "006":
+        {
+
+        },
+        "007":
+        {
+
+        },
+        "008":
+        {
+
+        },
+        "009":
+        {
+
+        }, 
+
+    }
+}
