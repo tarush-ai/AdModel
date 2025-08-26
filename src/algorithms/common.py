@@ -1,5 +1,5 @@
 from typing import Sequence, List
-from algorithmconfig import config
+from src.config import config
 import statistics as stats
 import math, json, os
 
