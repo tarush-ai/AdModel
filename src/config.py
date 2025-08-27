@@ -8,5 +8,7 @@ class Config:
     TEST_MODEL: str = "gpt-4o"
     REASONING_MODEL: str = "o3"
     NUMTURNS: int = 12     
+    RATE_LIMIT: int = 10
+
 
 config = Config()

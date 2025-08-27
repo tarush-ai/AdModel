@@ -1,5 +1,5 @@
-from src.development.ad import Advertisement as Ad
-from 
+from snurt import User_Topic_Relevance_NoAd_Algorithm
+from saurt import User_Topic_Relevance_Ad_Algorithm
 
 class BaseAlgorithm:
     def __init__(self, List[Ad]):
