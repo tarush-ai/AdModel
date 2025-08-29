@@ -22,3 +22,4 @@ ulid
 # Additional dependencies for chatbot
 python-dotenv>=1.0.0
 openai>=1.0.0
+voyageai>=0.2.0
