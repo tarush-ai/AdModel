@@ -4,36 +4,35 @@ import statistics as stats
 import math
 
 class CommonAlgorithm:
-    def __init__(self, data: Sequence[float]):
-        self.data: List[float] = list(data) 
+    def __init__(self):
         self.epsilon = config.EPSILON
         self.sigmoid_steepness = config.SIGMOID_STEEPNESS
 
-    def simple_z_scaling(self, population: bool = True) -> List[float]:
-        if not self.data:
+    def simple_z_scaling(self, data: List[float], population: bool = True) -> List[float]:
+        if not data:
             return []
-        mean = stats.fmean(self.data)
-        sd = stats.pstdev(self.data) if population else stats.stdev(self.data)
+        mean = stats.fmean(data)
+        sd = stats.pstdev(data) if population else stats.stdev(data)
         if sd <= 0:
-            return [0.0 for _ in self.data]
-        return [(num - mean)/(sd + self.epsilon) for num in self.data]
+            return [0.0 for _ in data]
+        return [(num - mean)/(sd + self.epsilon) for num in data]
 
     def robust_z_scaling(self, population: bool = True) -> List[float]:
-        if not self.data:
+        if not data:
             return []
-        med = stats.median(self.data)
-        mad = stats.median([abs(num - med) for num in self.data])
+        med = stats.median(data)
+        mad = stats.median([abs(num - med) for num in data])
         
         c = 1.4826
         if not population:
-            n = len(self.data)
+            n = len(data)
             if n > 1:
                 c *= (1 + 1/(4*n) + 7/(32*n**2))
 
         denom = c * mad
         if denom <= 0:
-            return [0.0 for _ in self.data]
-        return [(num - med)/(denom + self.epsilon) for num in self.data]
+            return [0.0 for _ in data]
+        return [(num - med)/(denom + self.epsilon) for num in data]
 
     def sigmoid(self, num: float) -> float:
         k = self.sigmoid_steepness
